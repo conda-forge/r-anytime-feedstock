@@ -1,4 +1,4 @@
-{% set version = '0.3.3' %}
+{% set version = "0.3.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/anytime_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/anytime/anytime_{{ version }}.tar.gz
-  sha256: 75a983edafb0dbd74f078a1b36088b72cc409d8e04124a01f761d86d296242db
+  sha256: 38d1ecd4b698f119076b8b4b1e39f39df0bd3eda928627014be04c3c1a6d78e0
 
 build:
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
