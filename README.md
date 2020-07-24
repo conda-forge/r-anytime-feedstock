@@ -3,7 +3,7 @@ About r-anytime
 
 Home: http://dirk.eddelbuettel.com/code/anytime.html
 
-Package license: GPL-2
+Package license: GPL-2.0-or-later
 
 Feedstock license: BSD-3-Clause
 
