@@ -37,7 +37,6 @@ requirements:
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-bh
     - r-rcpp >=0.12.9
 
 test:
@@ -47,7 +46,7 @@ test:
 
 about:
   home: http://dirk.eddelbuettel.com/code/anytime.html
-  license: GPL-2
+  license: GPL-2.0-or-later
   summary: Convert input in any one of character, integer, numeric, factor, or ordered type into 'POSIXct' (or 'Date') objects, using one of a number of predefined formats, and relying on Boost facilities for date and time parsing.
   license_family: GPL2
   license_file:
