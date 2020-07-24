@@ -1,4 +1,4 @@
-{% set version = "0.3.7" %}
+{% set version = "0.3.8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/anytime_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/anytime/anytime_{{ version }}.tar.gz
-  sha256: 697d870ce9aff571c9a70ed2c483b58a052682f39464fe751c47bd80559f6c6e
+  sha256: 93691fcd08a897b67516101e5481fc6f9707078e6fb60672ce6a4b0ce51289a9
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -37,7 +37,6 @@ requirements:
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-bh
     - r-rcpp >=0.12.9
 
 test:
@@ -47,13 +46,11 @@ test:
 
 about:
   home: http://dirk.eddelbuettel.com/code/anytime.html
-  license: GPL-2
-  summary: Convert input in any one of character, integer, numeric, factor, or ordered type into
-    'POSIXct' (or 'Date') objects, using one of a number of predefined formats, and
-    relying on Boost facilities for date and time parsing.
+  license: GPL-2.0-or-later
+  summary: Convert input in any one of character, integer, numeric, factor, or ordered type into 'POSIXct' (or 'Date') objects, using one of a number of predefined formats, and relying on Boost facilities for date and time parsing.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:

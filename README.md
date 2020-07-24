@@ -3,9 +3,9 @@ About r-anytime
 
 Home: http://dirk.eddelbuettel.com/code/anytime.html
 
-Package license: GPL-2
+Package license: GPL-2.0-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Convert input in any one of character, integer, numeric, factor, or ordered type into 'POSIXct' (or 'Date') objects, using one of a number of predefined formats, and relying on Boost facilities for date and time parsing.
 
