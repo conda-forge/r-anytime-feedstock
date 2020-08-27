@@ -1,4 +1,4 @@
-{% set version = "0.3.8" %}
+{% set version = "0.3.9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/anytime_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/anytime/anytime_{{ version }}.tar.gz
-  sha256: 93691fcd08a897b67516101e5481fc6f9707078e6fb60672ce6a4b0ce51289a9
+  sha256: 1096c15249ac70997a8a41c37eeb2a6d38530621abeae05d3dcd96a8acc7574a
 
 build:
   merge_build_host: true  # [win]
