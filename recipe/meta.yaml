@@ -1,4 +1,4 @@
-{% set version = "0.3.11" %}
+{% set version = "0.3.12" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/anytime_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/anytime/anytime_{{ version }}.tar.gz
-  sha256: ff508d514ae1efd9aab9f691f19b5ac14f4829125bff5210329ea5d491296be3
+  sha256: 5d41009a91d288c9ef89b73a6a157faedd43c8a07a8234a7c7c93731ace615eb
 
 build:
   number: 0
