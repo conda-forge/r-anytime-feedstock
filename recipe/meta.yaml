@@ -1,4 +1,4 @@
-{% set version = "0.3.12" %}
+{% set version = "0.3.13" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,13 +9,17 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/anytime_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/anytime/anytime_{{ version }}.tar.gz
-  sha256: 5d41009a91d288c9ef89b73a6a157faedd43c8a07a8234a7c7c93731ace615eb
+  sha256: 8cb58bece2a164ac6232ba40c8050a7c160e9da5f0953148722abae8356f7715
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -36,10 +40,10 @@ requirements:
   host:
     - r-base
     - r-bh
-    - r-rcpp >=0.12.9
+    - r-rcpp >=1.1.1
   run:
     - r-base
-    - r-rcpp >=0.12.9
+    - r-rcpp >=1.1.1
 
 test:
   commands:
@@ -48,6 +52,7 @@ test:
 
 about:
   home: http://dirk.eddelbuettel.com/code/anytime.html
+  dev_url: https://github.com/eddelbuettel/anytime
   license: GPL-2.0-or-later
   summary: Convert input in any one of character, integer, numeric, factor, or ordered type into 'POSIXct' (or 'Date') objects, using one of a number of predefined formats, and relying on Boost facilities for date and time parsing.
   license_family: GPL2
